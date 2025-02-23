@@ -1,3 +1,5 @@
+package textRPG
+
 class Zombie {
     var name:String = ""
     var color:String = ""

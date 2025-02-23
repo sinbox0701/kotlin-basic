@@ -1,3 +1,5 @@
+package textRPG
+
 class Slime {
     var name:String = ""
     var color:String = ""

@@ -1,3 +1,5 @@
+package textRPG
+
 class Archer {
     var name:String = ""
     var age:Int = 0

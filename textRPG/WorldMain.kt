@@ -1,3 +1,10 @@
+package textRPG
+
+import textRPG.Archer
+import textRPG.Wizard
+import textRPG.Slime
+import textRPG.Zombie
+import textRPG.CheerLeader
 fun main() {
     val worldName = "스코월드"
 
@@ -64,6 +71,14 @@ fun main() {
             println("[1] 슬라임동굴, [2] 좀비마을")
             var selectWorld = readLine()!!.toInt()
             selectWorldByArcher(selectWorld, myCharacter)
+        } else if(myJob == "치어리더") {
+            println("치어리더를 선택했군요")
+            var myCharacter = CheerLeader(myName, myAge, myGender, myMoney, myHp)
+
+            println("던전을 선택해주세요")
+            println("[1] 슬라임동굴, [2] 좀비마을")
+            var selectWorld = readLine()!!.toInt()
+            selectWorldByCheerLeader(selectWorld, myCharacter)
         }
     }
 }
@@ -100,5 +115,19 @@ fun selectWorldByWizard(selectWorld:Int, myCharacter: Wizard) {
         var zombie1 = Zombie("파랑좀비", "파랑", 142.2, 500, 25)
         zombie1.virus()
         myCharacter.fireBall()
+    }
+}
+
+fun selectWorldByCheerLeader(selectWorld:Int, myCharacter: CheerLeader) {
+    if(selectWorld == 1) { // 슬라임 던전
+        var slime1 = Slime("초록슬라임", "초록", 30.2, 200, 10)
+        slime1.attack()
+        myCharacter.cheer()
+        myCharacter.clap()
+    } else if(selectWorld == 2) { // 좀비 던전
+        var zombie1 = Zombie("파랑좀비", "파랑", 142.2, 500, 25)
+        zombie1.virus()
+        myCharacter.jump()
+        myCharacter.clap()
     }
 }
