@@ -1,6 +1,6 @@
 package textRPG
 
-class CheerLeader {
+class CheerLeader : Character {
     var name:String = ""
     var age:Int = 0
     var gender:String = ""
@@ -16,8 +16,8 @@ class CheerLeader {
         hp = _hp
     }
 
-    fun cheer() {
-        println("응원 - ${name} ${name}")
+    override fun attack() {
+        println("응원 - ${this.name} ${this.name}")
     }
 
     fun jump() {

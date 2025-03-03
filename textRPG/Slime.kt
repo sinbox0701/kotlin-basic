@@ -1,6 +1,6 @@
 package textRPG
 
-class Slime {
+class Slime: Monster, GreenSlimeSkill {
     var name:String = ""
     var color:String = ""
     var height:Double = 0.0
@@ -16,11 +16,19 @@ class Slime {
         damage = _damage
     }
 
-    fun attack() {
+    override fun attack() {
         println("점성 공격!")
     }
 
     fun jumpAttack() {
         println("점프해서 내려찍기!")
+    }
+
+    override fun poison() {
+        if(color == "초록") {
+            println("초록 독 퍼뜨리기!")
+        } else {
+            println("일반 슬라임은 사용할 수 없습니다.")
+        }
     }
 }

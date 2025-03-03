@@ -1,10 +1,5 @@
 package textRPG
 
-import textRPG.Archer
-import textRPG.Wizard
-import textRPG.Slime
-import textRPG.Zombie
-import textRPG.CheerLeader
 fun main() {
     val worldName = "스코월드"
 
@@ -98,6 +93,8 @@ fun selectWorldByArcher(selectWorld:Int, myCharacter: Archer) {
         slime1.attack()
         myCharacter.windArrow()
 
+        slime1.poison()
+
     } else if(selectWorld == 2) { // 좀비 던전
         var zombie1 = Zombie("파랑좀비", "파랑", 142.2, 500, 25)
         zombie1.virus()
@@ -107,9 +104,11 @@ fun selectWorldByArcher(selectWorld:Int, myCharacter: Archer) {
 
 fun selectWorldByWizard(selectWorld:Int, myCharacter: Wizard) {
     if(selectWorld == 1) { // 슬라임 던전
-        var slime1 = Slime("초록슬라임", "초록", 30.2, 200, 10)
+        var slime1 = Slime("파랑슬라임", "파랑", 30.2, 200, 10)
         slime1.attack()
         myCharacter.attack()
+
+        slime1.poison()
 
     } else if(selectWorld == 2) { // 좀비 던전
         var zombie1 = Zombie("파랑좀비", "파랑", 142.2, 500, 25)
@@ -122,7 +121,7 @@ fun selectWorldByCheerLeader(selectWorld:Int, myCharacter: CheerLeader) {
     if(selectWorld == 1) { // 슬라임 던전
         var slime1 = Slime("초록슬라임", "초록", 30.2, 200, 10)
         slime1.attack()
-        myCharacter.cheer()
+        myCharacter.attack()
         myCharacter.clap()
     } else if(selectWorld == 2) { // 좀비 던전
         var zombie1 = Zombie("파랑좀비", "파랑", 142.2, 500, 25)
@@ -131,3 +130,8 @@ fun selectWorldByCheerLeader(selectWorld:Int, myCharacter: CheerLeader) {
         myCharacter.clap()
     }
 }
+/*
+cd "/Users/kiwoong/hanghae/kotlin-basic/textRPG/" 
+&& kotlinc WorldMain.kt Archer.kt Zombie.kt Wizard.kt Slime.kt CheerLeader.kt Character.kt GreenSlimeSkill.kt Monster.kt 
+-include-runtime -d WorldMain.jar && java -jar WorldMain.jar
+ */
