@@ -25,7 +25,7 @@ enum class 클래스명 {
     
  }
  
- class Character {
+ class Character1 {
     var name:String = ""
     var hairColor:String = ""
     var height:Double = 0.0

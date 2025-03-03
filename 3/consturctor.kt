@@ -2,7 +2,7 @@ fun main() {
 
 }
 
-class Character {
+class Character2 {
     var name:String = ""
     var hairColor:String = ""
     var height:Double = 0.0

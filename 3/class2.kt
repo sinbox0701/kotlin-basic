@@ -1,16 +1,16 @@
 fun main() {
     // 불마법사로 객체화
-var magicianOne = Character("불마법사", "red", 180.2)
+var magicianOne = Character4("불마법사", "red", 180.2)
     println("${magicianOne.name}의 머리색상은 ${magicianOne.hairColor}입니다")
     magicianOne.fireBall()
 
     // 냉마법사로 객체화
-var magicianTwo = Character("냉마법사", "blue", 162.2, 25, "여")
+var magicianTwo = Character4("냉마법사", "blue", 162.2, 25, "여")
     println("${magicianTwo.name}의 머리색상은 ${magicianTwo.hairColor}이고 나이는 ${magicianTwo.age}입니다.")
     magicianTwo.fireBall()
 }
 
-class Character {
+class Character4 {
     var name:String = ""
     var hairColor:String = ""
     var height:Double = 0.0
