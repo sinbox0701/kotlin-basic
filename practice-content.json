@@ -1,0 +1,55 @@
+{
+  "uuid": "123e4567-e89b-12d3-a456-426614174000",
+  "type": "PRACTICE",
+  "categories": ["REVERSE", "WEB_HACKING"],
+  "cves": ["CVE-2024-12345"],
+  "ttps": [{ "ttpTacticId": "TA001", "ttpTechniqueId": "T1659" }],
+  "detailByLanguage": [
+    {
+      "language": "en",
+      "difficulty": "EASY",
+      "title": "Practice Content",
+      "author": "RaDoHoon",
+      "infra": {},
+      "challenges": [
+        {
+          "uuid": "123e4567-e89b-12d3-a456-426614174001",
+          "language": "en",
+          "title": "Challenge 1",
+          "score": 1,
+          "description": "./problem.md",
+          "walkthrough": "./solution.md",
+          "type": "SHORT_ANSWER",
+          "answer": "{FLAG}"
+        },
+        {
+          "uuid": "123e4567-e89b-12d3-a456-426614174002",
+          "language": "en",
+          "title": "Challenge 2",
+          "score": 1,
+          "description": "./problem.md",
+          "walkthrough": "./solution.md",
+          "type": "OPTIONS",
+          "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+          "correctAnswer": "Option 1"
+        },
+        {
+          "uuid": "123e4567-e89b-12d3-a456-426614174003",
+          "language": "en",
+          "title": "Challenge 3",
+          "score": 1,
+          "walkthrough": "./solution.md",
+          "type": "ESSAY",
+          "essayOptions": [
+            {
+              "uuid": "123e4567-e89b-12d3-a456-426614174004",
+              "method": "CONTENT_CHECK",
+              "criteria": "reason",
+              "maxScore": 100
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
